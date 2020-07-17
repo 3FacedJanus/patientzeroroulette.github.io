@@ -98,6 +98,7 @@ body {
 <option style="background-color: #311b43;" value="zero" style="color:white;">Patient Zero (Hokkaido)</option>
 </select>
 <br />
+<br />
 <button onclick="advance()">Advance to Next Mission</button>
 <script>
 function bgChange() {
@@ -117,6 +118,8 @@ function bgChange() {
   }
 }
 </script>
+<br />
+<br />
 <h2><u>Kill Conditions</u></h2>
 <input id="ilmelee" name="ilmelee" type="checkbox" value="ilmelee" checked/> <label title="Lethal melee weapons found naturally in the chosen mission." for="ilmelee">In-Level Melee Weapons</label><br />
 <input id="ilranged" name="ilranged" type="checkbox" value="ilranged" checked/> <label title="Ranged weapons found naturally in the chosen mission." for="ilranged">In-Level Ranged Weapons</label><br />
@@ -138,6 +141,7 @@ function bgChange() {
 <input id="adsnipers" name="adsnipers" type="checkbox" value="adsnipers"/> <label title="Adds a chance for 'Sniper Assassination' conditions to appear. These can be any kill you like, as long as the kill in question is triggered by you firing a sniper rifle (i.e., blowing up a propane flask or dropping a chandelier). Functions independently from 'Loadout Ranged Weapons.'" for="adsnipers">Sniper Assassinations</label><br />
 <input id="anykill" name="anykill" type="checkbox" value="anykill"/> <label title="Adds 'Kill using any method' to the possible kill conditions." for="anykill">Player's Choice Kills</label><br />
 <!--<input id="kokills" name="kokills" type="checkbox" value="kokills"/> <label title="If the roulette creates a kill condition involving a nonlethal weapon, it will additionally generate a specific kill method that must be performed after pacifying with the nonlethal weapon." for="kokills">Post-Pacify Kill Conditions</label>-->
+<br />
 <br />
   <span><i>Note: Kill Condition settings other than "Player's Choice Kills" do not affect "The Vector."</i></span>
 <br />
@@ -730,7 +734,7 @@ document.getElementById("target3pic").innerHTML = ''; document.getElementById("t
           possiblekills.push("with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive", "with a thrown explosive");
         }
           if (y == "specificbombs"){
-          possiblekills.push("with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball");
+          possiblekills.push("with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball","with an Explosive Golf Ball", "with an Explosive Golf Ball", "with an Explosive Golf Ball");
         }
           if (y == "sngbombs"){
           possiblekills.push();
@@ -1038,7 +1042,7 @@ document.getElementById("target3pic").innerHTML = ''; document.getElementById("t
           if (document.getElementById("nocommonmelee").checked == false){
           possiblekills.push("with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife");
         } else if (document.getElementById("nocommonmelee").checked == true){
-          possiblekills.push("with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana");
+          possiblekills.push("with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana","with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana","with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana");
         }
         }
         if (y == "genericweapons"){
@@ -1352,7 +1356,7 @@ var possiblekills = [];
           if (document.getElementById("nocommonmelee").checked == false){
           possiblekills.push("with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife", "with a Cleaver", "with a Scalpel", "with a Katana", "with Scissors", "with a Kitchen Knife");
         } else if (document.getElementById("nocommonmelee").checked == true){
-          possiblekills.push("with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana");
+          possiblekills.push("with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana","with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana","with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana", "with a Scalpel", "with a Katana");
         }
         }
         if (y == "genericweapons"){
@@ -1553,7 +1557,7 @@ document.getElementById("target3pic").innerHTML = ''; document.getElementById("t
 
 if (document.getElementById("objroulette").checked == true){
 if (document.getElementById("zerovirusmayhem").checked == true){
-var possibleobjectives = ["Allow the Nabazov Virus to spread to 1 or more NPCs.", "Allow the Nabazov Virus to spread to 2 or more NPCs.", "Allow the Nabazov Virus to spread to 3 or more NPCs.", "Allow the Nabazov Virus to spread to 4 or more NPCs.", "Allow the Nabazov Virus to spread to 5 or more NPCs.", "Allow the Nabazov Virus to spread to 6 or more NPCs.", "Allow the Nabazov Virus to spread to 7 or more NPCs.", "Allow the Nabazov Virus to spread to 8 or more NPCs.", "Allow the Nabazov Virus to spread to 9 or more NPCs.", "Allow the Nabazov Virus to spread to 10 or more NPCs.", "Allow the Nabazov Virus to spread to 11 or more NPCs.", "Allow the Nabazov Virus to spread to 12 or more NPCs.", "Allow the Nabazov Virus to spread to 13 or more NPCs.", "Allow the Nabazov Virus to spread to 14 or more NPCs.", "Allow the Nabazov Virus to spread to 15 or more NPCs.", "Allow the Nabazov Virus to spread to 16 or more NPCs.", "Allow the Nabazov Virus to spread to 17 or more NPCs.", "Allow the Nabazov Virus to spread to 18 or more NPCs.", "Allow the Nabazov Virus to spread to 19 or more NPCs.", "Allow the Nabazov Virus to spread to 20 or more NPCs."];
+var possibleobjectives = ["Allow the Nabazov Virus to spread to 1 or more NPCs.", "Allow the Nabazov Virus to spread to 2 or more NPCs.", "Allow the Nabazov Virus to spread to 3 or more NPCs.","Allow the Nabazov Virus to spread to 4 or more NPCs.", "Allow the Nabazov Virus to spread to 5 or more NPCs.", "Allow the Nabazov Virus to spread to 6 or more NPCs.", "Allow the Nabazov Virus to spread to 7 or more NPCs.","Allow the Nabazov Virus to spread to 8 or more NPCs.", "Allow the Nabazov Virus to spread to 9 or more NPCs.", "Allow the Nabazov Virus to spread to 10 or more NPCs.", "Allow the Nabazov Virus to spread to 11 or more NPCs.", "Allow the Nabazov Virus to spread to 12 or more NPCs.", "Allow the Nabazov Virus to spread to 13 or more NPCs.", "Allow the Nabazov Virus to spread to 14 or more NPCs.", "Allow the Nabazov Virus to spread to 15 or more NPCs.", "Allow the Nabazov Virus to spread to 16 or more NPCs.", "Allow the Nabazov Virus to spread to 17 or more NPCs.", "Allow the Nabazov Virus to spread to 18 or more NPCs.", "Allow the Nabazov Virus to spread to 19 or more NPCs.", "Allow the Nabazov Virus to spread to 20 or more NPCs."];
 var objectivesmethod = possibleobjectives[Math.floor(Math.random() * possibleobjectives.length)];
 document.getElementById("target4pic").innerHTML = '<img src=\'https://i.imgur.com/MqpAhvw.png\' width="100%" height="100%">'; document.getElementById("target4killconditions").innerHTML = objectivesmethod;
 } else if (document.getElementById("zerovirusmayhem").checked == false){
@@ -1717,18 +1721,6 @@ bgchange();
 
 
 
-<br />
-<br />
-<p><i>Planned Future Features:</i></p><ul>
-  <li><i>Loadout Roulette!</i></li>
-  <li><i>Adding an option for specific kill conditions post-pacification (i.e., "Kill Kalvin Ritter with a pistol after pacifying him with a Bust.")</i></li>
-  <li><i>Full compatibility with Hitman 3 after it comes out.</i></li>
-  <li><i>A way to import/export option presets, plus a personal High Score option (maybe).</i></li>
-  <li><i>More unique kill conditions (i.e., Pushing Dalia onto Viktor, massaging Strandberg, etc.)</i></li>
-  <li><i>Kill condition probability sliders - set on a scale of 1 to 5 how often specific kill conditions can occur.</i></li>
-  <li><i>Adjusting kill condition probabilities and fixing other bugs.</i></li>
-  <li><i>Anything else that gets suggested that I can manage to put in!</i></li>
-</ul>
 <br />
 <br />
 <br />
