@@ -282,7 +282,7 @@ function looseDisguises() {
   <li><i>Infected NPC Kill Conditions</i>:  Designates a kill condition for all NPCs infected by the Nabazov Virus.</li>
   <li><i>Standard Virus Rules</i>:  Only designates "Kill all infected NPCs."</li>
   <li><i>No Virus Spread</i>:  Only designates "Do not let the Nabazov Virus spread." Disables Patient Zero Mayhem.</li>
-  <li>Note: These options only apply to the "Paient Zero" mission. None of these options will appear if Objective Roulette is turned off.</li>
+  <li>Note: These options only apply to the "Patient Zero" mission. None of these options will appear if Objective Roulette is turned off.</li>
 </ul>
 <input id="zerovirusmayhem" name="zerovirusmayhem" type="checkbox" value="zerovirusmayhem"/> <label title="While checked, the Objective Roulette for 'Patient Zero' will determine a minimum number of NPCs you must allow the Nabazov Virus to spread to." for="zerovirusmayhem"> Patient Zero Mayhem</label><br />
 <script>
@@ -1304,6 +1304,12 @@ document.getElementById("target4pic").innerHTML = ''; document.getElementById("t
      
      if (killmethod == null) {
      errorreset();
+     } else if (killmethod == "by electrocution") {
+     crazywarning();
+     } else if (killmethod == "with a falling object") {
+     crazywarning();
+     } else if (killmethod == "with a fatal fall") {
+     crazywarning();
      }
      
      if (disguisemethod == null) {
@@ -1325,6 +1331,12 @@ document.getElementById("target4pic").innerHTML = ''; document.getElementById("t
      
      if (killmethod == null) {
      errorreset();
+     } else if (killmethod == "by electrocution") {
+     crazywarning();
+     } else if (killmethod == "with a falling object") {
+     crazywarning();
+     } else if (killmethod == "with a fatal fall") {
+     crazywarning();
      }
      
      if (disguisemethod == null) {
@@ -1660,7 +1672,7 @@ document.getElementById("target4pic").innerHTML = '';
 document.getElementById("target4killconditions").innerHTML = "";
 document.getElementById("exitconditions").innerHTML = "";
 selectElement('mission', 'rando');
-document.body.style.backgroundColor = "#ffffff";
+document.body.style.backgroundColor = "#000000";
 bgchange();
 }
 </script>
@@ -1702,7 +1714,7 @@ document.getElementById("target4pic").innerHTML = '';
 document.getElementById("target4killconditions").innerHTML = "";
 document.getElementById("exitconditions").innerHTML = "";
 selectElement('mission', 'rando');
-document.body.style.backgroundColor = "#ffffff";
+document.body.style.backgroundColor = "#000000";
 bgchange();
 }
 </script>
@@ -1723,7 +1735,7 @@ document.getElementById("target4pic").innerHTML = '';
 document.getElementById("target4killconditions").innerHTML = "";
 document.getElementById("exitconditions").innerHTML = "";
 selectElement('mission', 'rando');
-document.body.style.backgroundColor = "#ffffff";
+document.body.style.backgroundColor = "#000000";
 bgchange();
 }
 </script>
